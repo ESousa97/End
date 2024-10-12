@@ -1,0 +1,200 @@
+/* Estilos gerais */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    width: 90%;
+    max-width: 900px;
+}
+
+.description {
+    font-size: 1.1rem; /* Tamanho de fonte ligeiramente maior para melhorar a legibilidade */
+    line-height: 1.6; /* Espaçamento entre linhas para facilitar a leitura */
+    color: #333; /* Cor mais escura para melhor contraste */
+    margin-bottom: 25px;
+    text-align: justify; /* Justifica o texto para uma aparência mais alinhada */
+}
+
+.description strong {
+    color: #007BFF; /* Destaque para o nome do desenvolvedor */
+    font-weight: bold;
+}
+
+.description a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold; /* Destaca o link */
+    border-bottom: 2px solid transparent; /* Cria um efeito de sublinhado */
+    transition: border-bottom 0.3s ease, color 0.3s ease; /* Transição suave no hover */
+}
+
+.description a:hover {
+    color: #0056b3; /* Mudança de cor suave no hover */
+    border-bottom: 2px solid #007BFF; /* Sublinhado azul aparece no hover */
+}
+
+/* Estilo do título */
+h1 {
+    font-size: 2.5rem;
+    color: #007BFF;
+    margin-bottom: 20px;
+}
+
+/* Estilos do carrossel */
+.carousel {
+    width: 80%; /* Reduz o tamanho geral do carrossel */
+    margin: 0 auto 20px auto; /* Centraliza o carrossel horizontalmente e define margem inferior */
+    overflow: hidden;
+    position: relative;
+    border-radius: 8px; /* Suaviza as bordas */
+}
+
+.carousel-images {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+    height: 100%; /* Garante que as imagens ocupem toda a altura do carrossel */
+}
+
+.carousel-images img {
+    width: 100%;
+    height: 100%; /* Garante que a imagem ocupe toda a altura do carrossel */
+    object-fit: cover; /* Ajusta a imagem para cobrir o espaço sem distorção */
+    flex: 0 0 100%; /* Garante que uma imagem ocupe toda a área visível */
+}
+
+/* Botões de navegação do carrossel */
+.prev-btn, .next-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 2rem;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.prev-btn {
+    left: 10px;
+}
+
+.next-btn {
+    right: 10px;
+}
+
+.prev-btn:hover, .next-btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Estilos dos botões */
+.buttons-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 12px 25px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo responsivo para telas menores */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 20px; /* Reduz o padding para dispositivos menores */
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .carousel {
+        width: 90%;
+        height: 250px; /* Reduz a altura para dispositivos móveis */
+        max-width: 400px;
+    }
+
+    .buttons-container {
+        flex-direction: column;
+        margin-top: 15px;
+    }
+
+    .btn {
+        margin-bottom: 10px;
+    }
+
+    .prev-btn, .next-btn {
+        font-size: 1.5rem;
+        padding: 8px;
+    }
+}
+
+/* Estilo específico para smartphones (telas muito pequenas) */
+@media (max-width: 480px) {
+    .carousel {
+        width: 100%; /* O carrossel ocupa toda a largura da tela */
+        height: 180px; /* Altura menor para smartphones */
+    }
+
+    .prev-btn, .next-btn {
+        font-size: 1rem; /* Botões de navegação menores */
+        padding: 5px;
+    }
+
+    h1 {
+        font-size: 1.5rem; /* Reduz o tamanho da fonte do título */
+        margin-bottom: 15px; /* Diminui o espaçamento inferior */
+    }
+
+    .description {
+        font-size: 0.8rem; /* Reduz o tamanho da fonte do texto */
+        line-height: 1.4; /* Ajusta o espaçamento entre linhas */
+        margin-bottom: 20px; /* Reduz o espaçamento inferior */
+        padding: 0 10px; /* Adiciona espaçamento interno para uma leitura mais confortável */
+    }
+
+    .buttons-container {
+        flex-direction: column;
+        margin-top: 10px;
+    }
+
+    .btn {
+        padding: 8px 18px; /* Botões menores */
+        font-size: 0.85rem; /* Tamanho da fonte reduzido */
+        margin-bottom: 10px; /* Ajuste no espaçamento entre botões */
+    }
+}
