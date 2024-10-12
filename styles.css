@@ -122,6 +122,38 @@ h1 {
     background-color: #0056b3;
 }
 
+/* Lightbox para o zoom */
+.lightbox {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.8); /* Fundo escuro */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Impede que o conteúdo ultrapasse os limites da tela */
+    z-index: 9999;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    cursor: grab; /* Indica que o usuário pode arrastar a imagem */
+    transition: transform 0.3s ease; /* Suaviza a transição de zoom */
+}
+
+.lightbox img:active {
+    cursor: grabbing;
+}
+
+.carousel-images img {
+    cursor: zoom-in; /* Ícone de lupa para indicar o zoom */
+}
+
+
 /* Estilo responsivo para telas menores */
 @media (max-width: 768px) {
     .container {
